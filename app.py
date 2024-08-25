@@ -1,14 +1,4 @@
 import streamlit as st
-import os
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
-def index():
-  return render_template("index.html")
-
-if __name__ == '__main__':
-  app.run(debug = True, host = '0.0.0.0', port = int(os.environ.get('PORT',8080)))
 
 st.set_page_config(page_title = "SMAQCloud2.0",  
                    page_icon =  "🐠", 
@@ -28,26 +18,26 @@ st.markdown(
 )
 
 home_page = st.Page(
-	page="pages/home.py",
+	page="tabs/home.py",
 	title="Home",
 	icon = "🏡",
   default=True
 )
 
 sysparams_page = st.Page(
-	page="pages/sysparams.py",
+	page="tabs/sysparams.py",
 	title="System Parameters",
 	icon = "📈",
 )
 
 plant_page = st.Page(
-	page="pages/fish.py",
+	page="tabs/fish.py",
 	title="Plant Monitoring",
 	icon = "🪴",
 )
 
 fish_page = st.Page(
-	page="pages/plant.py",
+	page="tabs/plant.py",
 	title="Fish Monitoring",
 	icon = "🐟",
 )
