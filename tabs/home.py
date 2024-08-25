@@ -4,7 +4,7 @@ import json
 from streamlit_lottie import st_lottie
 from PIL import Image
 
-fish_lottie_url = "../lottieanimations/fish_lottie.json"
+fish_lottie_url = "./lottieanimations/fish_lottie.json"
 
 with open(fish_lottie_url, "r",errors='ignore') as fish:
     fish_lottie = json.load(fish)
